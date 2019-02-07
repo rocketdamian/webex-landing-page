@@ -30,6 +30,10 @@
         width: 60%;
       }
     }
+
+    .uk-modal-body {
+      border-radius: 50px;
+    }
   </style>
 </head>
 
@@ -90,7 +94,7 @@
 
 
   <div class="uk-container uk-container">
-    <div class="uk-flex-middle uk-grid-divider uk-margin-large-top uk-margin-medium-bottom" uk-grid>
+    <div class="uk-flex-middle uk-grid-divider uk-margin-xlarge-top uk-margin-xlarge-bottom" uk-grid>
       <div class="uk-width-1-2@m uk-flex uk-flex-center" uk-scrollspy="cls: uk-animation-fade; repeat: true: delay: 300">
         <img data-src="img/celebracion.png" uk-img style="width: 60%; height: 60%;">
       </div>
@@ -122,7 +126,7 @@
       </div>
 
 
-      <div class="uk-grid-large uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500; repeat: true;">
+      <div class="uk-grid-large uk-child-width-expand@s uk-text-center uk-margin-large-bottom" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500; repeat: true;">
         <div>
           <div class="">
             <img data-src="img/78.png" uk-img class="img-small">
@@ -167,7 +171,7 @@
     <div class="uk-flex uk-flex-center uk-margin-xlarge-top uk-margin-xlarge-bottom" uk-scrollspy="cls: uk-animation-scale-up; repeat: true: delay: 300">
       <div class="uk-text-center">
         <!-- LINK  -->
-        <a href="#">
+        <a href="#modal-example" uk-toggle>
           <img data-src="img/button.png" uk-img style="width: 100%; height: 100%;">
         </a>
       </div>
@@ -199,10 +203,65 @@
     </div>
   </div>
 
+  <div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <div class="uk-flex uk-flex-center">
+        <div>
+          <img class="uk-margin-small-top uk-margin-small-bottom" data-src="img/webex-teams.png" uk-img width="140px">
+        </div>
+      </div>
+      <h2 class="uk-text-center">
+        Regístrate para recibir tu licencia demo y comienza la experiencia Webex.
+      </h2>
+      <form class="uk-form uk-margin-medium">
+      
+        <div class="uk-margin">
+          <label class="uk-form-label" for="nombre">Nombre</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" id="nombre" type="text">
+          </div>
+        </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>
-  </script>
+        <div class="uk-margin">
+          <label class="uk-form-label" for="empresa">Empresa</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" id="empresa" type="text">
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <label class="uk-form-label" for="puesto">Puesto</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" id="puesto" type="text">
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <label class="uk-form-label" for="telefono">Teléfono</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" id="telefono" type="text">
+          </div>
+        </div>
+        
+        <div class="uk-margin">
+          <label class="uk-form-label" for="mail">Mail</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" id="mail" type="email">
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <label class="uk-form-label" for="mensaje">Mensaje</label>
+          <div class="uk-form-controls">
+            <textarea id="mensaje" class="uk-textarea"></textarea>
+          </div>
+        </div>
+
+        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Comenzar</button>
+      
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
